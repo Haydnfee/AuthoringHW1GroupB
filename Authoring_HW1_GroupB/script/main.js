@@ -68,18 +68,16 @@
         let lightboxDesc = lightbox.querySelector('p');
 
         lightboxImg.src = "images/" + currentObject.images[currentIndex];
-        lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
-
-        lightboxClose.addEventListener('click', closeLightbox, false);
+        lightboxDesc.innerHTML = currentObject.imageDescription;
+        lightboxClose.addEventListener('click', closeLightbox);
       }
 
-      function closeLightbox(event) {
+      function closeLightbox() {
+        lightbox = document.querySelector('.lightbox')
+        lightbox.style.display = 'none';
+        //console.log('fired');
         debugger;
 
-        function closeLightbox() { 
-          lightboxImg.display = 'none';
-
-        }
         // reset all the lightbox content, close the lightbox, 
       }
 
